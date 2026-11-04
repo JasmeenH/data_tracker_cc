@@ -38,10 +38,10 @@
 }
 
 .guide_highlight {
-    background-color: #0e62f2;
-    border: 2px solid #1264f2;
+    background-color: #518bef;
+    border: 2px solid #2d75f2;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(82, 71, 239, 0.55);
+    box-shadow: 0 0 20px rgba(137, 130, 247, 0.55);
     transition: 0.3s;
     color: #d7e2ee;
 }

@@ -1,16 +1,16 @@
 const guideSteps = [
     {
-        target: "summary_section",
+        c: "summary_section",
         title: "Summary cards",
         text: "These cards show your total hours, the number of people you supported and your submitted entries."
     },
     {
-        target: "service_entry_section",
+        c: "service_entry_section",
         title: "Add service entry",
         text: "Click this button when you want to record a new service activity. You can also open this page from the naviagtion bar on the left"
     },
     {
-        target: "entries_section",
+        c: "entries_section",
         title: "My service entries",
         text: "This section shows the service entries you have already submitted."
     }
@@ -36,7 +36,7 @@ function showGuideStep() {
     clearHighlight();
 
     const step = guideSteps[guideNumber];
-    const c = document.getElementById(step.target);
+    const c = document.getElementById(step.c);
 
     guideStep.textContent = "Step " + (guideNumber + 1) + " of " + guideSteps.length;
     guideTitle.textContent = step.title;
@@ -48,14 +48,14 @@ function showGuideStep() {
         guideNext.textContent = "Next";
     }
 
-    if (target) {
-        target.scrollIntoView({behavior: "smooth",block: "center"});
-        target.classList.add("guide_highlight");
+    if (c) {
+        c.scrollIntoView({behavior: "smooth",block: "center"});
+        c.classList.add("guide_highlight");
 
         setTimeout(function () {
-            const targetPosition = target.getBoundingClientRect();
-            guideCard.style.top = window.scrollY + targetPosition.bottom + 12 + "px";
-            guideCard.style.left = window.scrollX + targetPosition.left + "px";
+            const cPosition = c.getBoundingClientRect();
+            guideCard.style.top = window.scrollY + cPosition.bottom + 12 + "px";
+            guideCard.style.left = window.scrollX + cPosition.left + "px";
         }, 400);
     }
 }
