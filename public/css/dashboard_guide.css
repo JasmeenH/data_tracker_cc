@@ -1,0 +1,47 @@
+.guide_card {
+    position: absolute;
+    z-index: 1050;
+    width: 260px;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid #d7e2ee;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.guide_card[hidden] {
+    display: none;
+}
+
+.guide_close {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    color: #555;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.guide_card h6 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    color: #1f446e;
+}
+
+.guide_card p {
+    margin-bottom: 14px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.guide_highlight {
+    background-color: #0e62f2;
+    border: 2px solid #1264f2;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(82, 71, 239, 0.55);
+    transition: 0.3s;
+    color: #d7e2ee;
+}
